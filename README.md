@@ -8,5 +8,6 @@ No servidor que será nonitorado instalar o serviço via crontab abaixo indicand
 
 
 No comando abaixo o monitoramento será rodado a cada 30 minutos
-*/30 * * * * python3 /var/services.py
+
+*/30 * * * * python /var/services.py
 
