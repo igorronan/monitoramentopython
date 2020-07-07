@@ -42,9 +42,12 @@ def sendmail(service):
 output = commands.getoutput('ps -A')
 if 'cups' not in output:
     sendmail('cups')
+    os.system("sudo /etc/init.d/cups restart")
 
 if 'apache2' not in output:
     sendmail('Apache2')
+    os.system("sudo /etc/init.d/apache2 restart")
 
 if 'mysql' not in output:
     sendmail('Mysql')
+    os.system("sudo /etc/init.d/mysql restart")
